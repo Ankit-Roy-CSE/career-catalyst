@@ -1,0 +1,185 @@
+.auth-form-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 2.5rem;
+    padding-top: 1.5rem;
+    box-sizing: border-box;
+    gap: 1rem;
+}
+
+.auth-form {
+    width: 100%;
+}
+
+.auth-form .sign-up-heading {
+    font-size: 1.5rem;
+}
+
+.auth-form .auth-form-input-box-container {
+    background: #FFFFFF;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+}
+
+.auth-form .auth-form-input-box {
+    width: 100%;
+    background: #F7F8FA;
+    outline: none;
+    border: 1px solid #c3c3c3;
+    padding: 1rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.auth-form-input-box-container .first-name {
+    border-radius: 0.5rem 0 0 0;
+}
+
+.auth-form-input-box-container .last-name {
+    border-radius: 0 0.5rem 0 0;
+}
+
+.auth-form-input-box-container .confirm-password {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.auth-form-container .name-input-container,
+.auth-form-container .password-container {
+    display: grid;
+    grid-auto-flow: column;
+    background: #F7F8FA;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-form-container .name-input-container {
+    justify-content: stretch;
+}
+
+.auth-form-container .password-container {
+    width: 100%;
+    border: 1px solid #c3c3c3;
+}
+
+.auth-form-container .password-container .show-icon {
+    width: 2rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.auth-form-container .password-container .password {
+    border: none;
+}
+
+.auth-form .create-account-btn {
+    border-radius: 1.25rem;
+    background: #2F6CE5;
+    width: 100%;
+    height: 2.5rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    font-size: 0.875rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.auth-form .submit-btn-container {
+    display: block;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-form .submit-btn-container u {
+    display: none;
+    font-size: 0.8125rem;
+    color: #495057;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.oauth-btn {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    border: 0.6px solid #b8b8b8;
+    background: #FFF;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.forgot-password-link {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 1.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+.auth-form-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: end;
+    gap: 1.5rem;
+}
+
+.sign-in-link-text {
+    color: #2F6CE5;
+    cursor: pointer;
+}
+
+.auth-form-img-container .sign-up-text {
+    font-size: 0.8125rem;
+    text-align: end;
+}
+
+.privacy-policy-text {
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    opacity: 0.6;
+    font-size: 0.6875rem;
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .auth-form-container {
+        grid-template-columns: auto;
+    }
+
+    .auth-form .submit-btn-container {
+        display: grid;
+    }
+
+    .auth-form .submit-btn-container u {
+        display: grid;
+
+    }
+
+    .auth-form .create-account-btn {
+        padding: 0.2rem 1rem;
+        border-radius: 1.75rem;
+    }
+
+    .auth-form-img-container {
+        display: none;
+    }
+}
