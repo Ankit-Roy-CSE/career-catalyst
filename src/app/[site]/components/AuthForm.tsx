@@ -1,9 +1,13 @@
 'use client'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "../../../styles/authForm.css"
 
-const AuthForm: React.FC = (): JSX.Element => {
+interface AuthFormProps {
+    onSubmit: (data: { firstName: string, lastName: string, email: string, password: string, confirmPassword: string }) => void
+}
+
+const AuthForm: React.FC<AuthFormProps> = ({ onSubmit = () => { } }): JSX.Element => {
     const [firstName, setFirstName] = useState<string>("")
     const [lastName, setLastName] = useState<string>("")
     const [email, setEmail] = useState<string>("")
@@ -36,21 +40,17 @@ const AuthForm: React.FC = (): JSX.Element => {
         }
     }
 
-    function onSubmitHandler(e: React.FormEvent<HTMLFormElement>) {
+    const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        console.log({
+        onSubmit({
             firstName,
             lastName,
             email,
             password,
             confirmPassword
         })
-        console.log("Form submitted")
     }
 
-    useEffect(() => {
-
-    }, [])
     return (
         <div className="auth-form-container">
             <form className="auth-form" onSubmit={onSubmitHandler}>
